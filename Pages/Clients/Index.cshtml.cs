@@ -29,13 +29,15 @@ namespace MyStore.Pages.Clients
                                 clientInfo.phone = reader.GetString (3);
                                 clientInfo.phone = reader.GetString(4);
                                 clientInfo.created_at = reader.GetString (5);
+
+                                listClients.Add(clientInfo);
                             }
                         }
                     }
                 }
             } catch (Exception ex)
             {
-
+                Console.WriteLine("Exception : " + ex.ToString());
             }
         }
     }

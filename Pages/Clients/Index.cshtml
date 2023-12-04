@@ -18,8 +18,8 @@
             <th>Action</th>
         </tr>
     </thead>
-    <tbody>
-        @foreach(var item in Model.listClients)
+   <tbody>
+       @foreach(var item in Model.listClients)
         {
             <tr>
                 <td>@item.id</td>
@@ -29,11 +29,11 @@
                 <td>@item.address</td>
                 <td>@item.created_at</td>
                 <td>
-                    <a class ="btn btn-primary btn-sm" href="Clients/Edit?id=@item.id">Edit</a>
-                    <a class="btn btn-danger btn-sm" href="Clients/Delete?id=@item.id">Delete</a>
+                    <a class="btn btn-primary btn-sm" href="/Clients/Edit?id=@item.id">Edit</a>
+                    <a class ="btn btn-danger btn-sm" href="/Clients/Delete?id=@item.id">Delete</a>
                 </td>
-                
             </tr>
         }
-    </tbody>
+
+</tbody>
 </table>
